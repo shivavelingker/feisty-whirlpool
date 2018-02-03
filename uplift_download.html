@@ -1,13 +1,10 @@
 <script>
 var xhr = new XMLHttpRequest();
-xhr.open("GET", "https://www.dropbox.com/s/hpvfxm4edmw63j4/uplift_version.txt?dl=1");
-xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+xhr.open("GET", "https://dl.dropboxusercontent.com/s/hpvfxm4edmw63j4/uplift_version.txt?dl=1");
 xhr.onreadystatechange = function (){
-	console.log(xhr)
 	if(xhr.readyState == 4 && xhr.status == 200){
 		var version = xhr.response;
-		console.log(version);
-		// window.location = "https://github.com/shivavelingker/feisty-whirlpool/releases/download/v"+version+"/Uplift-Setup-"+version+".exe";
+		window.location = "https://github.com/shivavelingker/feisty-whirlpool/releases/download/v"+version+"/Uplift-Setup-"+version+".exe";
 	}
 }
 xhr.send();
